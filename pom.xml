@@ -63,7 +63,7 @@
             <artifactId>heroku-maven-plugin</artifactId>
             <version>0.3.5</version>
             <configuration>
-                <appName>murmuring-peak-7298</appName>
+                <appName>lahjalista</appName>
             </configuration>
         </plugin>
     </plugins>
