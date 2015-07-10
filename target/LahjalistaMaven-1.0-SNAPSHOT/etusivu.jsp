@@ -110,7 +110,7 @@
                                 <input type="text" name="lahja-nimi" id="lahja-nimi-hidden" class="form-control" id="lahja-url-hidden" value="" disabled>
                             </div>
                         </div>
-                        <div class="form-group vertical-center">
+                        <div class="form-group">
                             <label class="col-md-2 control-label">Esimerkkisivu</label>
                             <div class="col-md-10">  
                                 <a id="lahja-url-hidden"  href="" target="_blank">test</a>
