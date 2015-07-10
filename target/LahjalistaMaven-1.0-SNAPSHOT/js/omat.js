@@ -40,7 +40,13 @@ $(document).ready(function(){
           $('#id-kentta').val(id);
           $('#id-kentta2').val(id);
           $('#lahja-nimi-hidden').val(nimi);
-          $('#lahja-url-hidden').val(url);
+          
+          $('#lahja-url-hidden').attr('href',url);
+          $('#lahja-url-hidden').html(url);
+          
+          /*
+          var a = document.getElementById('lahja-url-hidden2')
+          a.href = url;*/
 
      });
   });

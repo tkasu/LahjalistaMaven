@@ -57,9 +57,9 @@
         <table class="table table-condensed">
             <thead>
                 <tr>
-                    <th>nimi</th>
-                    <th>hinta</th>
-                    <th>varausten määrä</th>
+                    <th>Lahja</th>
+                    <th>Hinta</th>
+                    <th>Varausten määrä</th>
                     <!--<th class="pull-right">Varaus</th>-->
                 </tr>
             </thead>
@@ -110,14 +110,14 @@
                                 <input type="text" name="lahja-nimi" id="lahja-nimi-hidden" class="form-control" id="lahja-url-hidden" value="" disabled>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-md-2 control-label">Esimerkki-URL</label>
-                            <div class="col-md-10">
-                                <input type="url" name="lahja-url" class="form-control" id="lahja-url-hidden" value="" disabled>
+                        <div class="form-group vertical-center">
+                            <label class="col-md-2 control-label">Esimerkkisivu</label>
+                            <div class="col-md-10">  
+                                <a id="lahja-url-hidden"  href="" target="_blank">test</a>
                             </div>
                         </div>
                         <br>
-                        <h4 class ="modal-title">Uusi Varaaja</h4>
+                        <h4 class ="modal-title">Uusi varaaja</h4>
                         <div class="form-group">
                             <label class="col-md-2 control-label">Varaajan nimi</label>
                             <div class="col-md-10">
@@ -127,7 +127,7 @@
                         <div class="form-group">
                             <label class="col-md-2 control-label">Email</label>
                             <div class="col-md-10">
-                                <input type="text" class="form-control" name="email" placeholder="email (pakollinen)">
+                                <input type="text" class="form-control" name="email" placeholder="Email (pakollinen)">
                             </div> 
                         </div>
                         <div class="form-group">
@@ -137,7 +137,7 @@
                             </div> 
                         </div> 
                         <div class="modal-body right">
-                            <button type="submit" class="btn btn-primary">Varaa</button>
+                            <button type="submit" class="btn btn-primary">Vahvista varaus</button>
                         </div>
                     </form>
                     <br>
@@ -151,7 +151,7 @@
                         <br>
                         <br>
                         <div class="modal-body right">
-                            <button type="submit" class="btn btn-primary">Varaa</button>
+                            <button type="submit" class="btn btn-primary">Vahvista varaus</button>
                         </div>
                     </form>
                     <div class="modal-footer">
