@@ -63,8 +63,9 @@
             <artifactId>heroku-maven-plugin</artifactId>
             <version>0.3.5</version>
             <configuration>
+                <warFile>target/LahjalistaMaven-1.0-SNAPSHOT.war</warFile>
                  <processTypes>
-                    <web>java $JAVA_OPTS -cp target/classes:target/dependency/* passIn</web>
+                    <web>java $JAVA_OPTS -cp target/classes:target/dependency/* TunnussanaServlet</web>
                  </processTypes>
                 <appName>lahjalista</appName>
             </configuration>

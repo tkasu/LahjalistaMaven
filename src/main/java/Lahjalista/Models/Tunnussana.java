@@ -14,11 +14,10 @@ public class Tunnussana {
 
     
     public Tunnussana() {
-        
     }
     
     public static boolean oikeaTunnussana(String tunnussana) throws SQLException, NamingException, URISyntaxException {
-        String sql = "SELECT * FROM Tunnussana WHERE sana = ?";
+        String sql = "SELECT * FROM Tunnussana WHERE LOWER(sana) = LOWER(?)";
         Connection yhteys = null;
         PreparedStatement kysely = null;
         ResultSet tulokset = null;
@@ -26,6 +25,7 @@ public class Tunnussana {
         yhteys = Tietokanta.getYhteys();
         kysely = yhteys.prepareStatement(sql);
         kysely.setString(1, tunnussana);
+        
         tulokset = kysely.executeQuery();
         
         boolean loytyiko = false;
