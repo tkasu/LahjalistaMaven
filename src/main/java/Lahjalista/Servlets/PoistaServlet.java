@@ -18,6 +18,8 @@ public class PoistaServlet extends LahjalistaServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        request.setCharacterEncoding("UTF-8");
+        
         HttpSession session = request.getSession();
         int id = Integer.parseInt(request.getParameter("poista-id"));
         List<Varaus> varatut = Varaus.etsiLahjalla(id);

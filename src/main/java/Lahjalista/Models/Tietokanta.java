@@ -18,7 +18,7 @@ public class Tietokanta {
 
         String username = dbUri.getUserInfo().split(":")[0];
         String password = dbUri.getUserInfo().split(":")[1];
-        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + dbUri.getPath();
+        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + dbUri.getPath() + "?charSet=UTF8";
 
         return DriverManager.getConnection(dbUrl, username, password);
 }

@@ -29,6 +29,8 @@ public class LisaaServlet extends LahjalistaServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        request.setCharacterEncoding("UTF-8");
+        
         Lahjaehdotus uusiLahja = new Lahjaehdotus();
         String nimi = request.getParameter("nimi");
         String hinta = request.getParameter("hinta");

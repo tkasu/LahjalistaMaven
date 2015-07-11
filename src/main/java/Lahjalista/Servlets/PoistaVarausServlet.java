@@ -15,6 +15,9 @@ public class PoistaVarausServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        request.setCharacterEncoding("UTF-8");
+        
         HttpSession session = request.getSession();
         int lahjaId = Integer.parseInt(request.getParameter("poista-lahja-id"));
         int varaajaId = Integer.parseInt(request.getParameter("poista-varaaja-id"));
