@@ -52,15 +52,15 @@ public class Vieras {
         uusiEmail = uusiEmail.replace('>', ' ');
         this.email = uusiEmail;
         
-        Vieras vastaava = etsiEmaililla(uusiEmail);
+        //Vieras vastaava = etsiEmaililla(uusiEmail);
         
-        if (uusiEmail.trim().length() == 0) {
-            virheet.put("email", "Email ei saa olla tyhjä.");
-        } else if (vastaava != null && vastaava.getId() != this.getId()) {
-            virheet.put("email", "Email löytyy jo tietokannasta!");
-        } else {
-            virheet.remove("email");
-        }
+        //if (uusiEmail.trim().length() == 0) {
+        //    virheet.put("email", "Email ei saa olla tyhjä.");
+        //} else if (vastaava != null && vastaava.getId() != this.getId()) {
+        //    virheet.put("email", "Email löytyy jo tietokannasta!");
+        //} else {
+        //    virheet.remove("email");
+        //}
     }
     
     public String getEmail() {

@@ -39,6 +39,7 @@ public class MuokkaaServlet extends LahjalistaServlet {
 
                 } catch (Exception e) {
                     session.setAttribute("ilmoitus", e.getMessage());
+                    response.sendRedirect("admin");
                 }
 
                 

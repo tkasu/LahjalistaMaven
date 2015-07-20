@@ -1,6 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
-<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <t:pohja pageTitle="Lahjalista">
     <ul class="nav nav-tabs">
@@ -18,12 +19,22 @@
     <br>
     <br>
     
+    <div class="container center-block text-center etuinfo">
+        <h5>Meillä on ilo kutsua teidät todistamaan, kun sanomme toisillemme ”tahdon”.</h5>
+    </div>
+    
     <div class="container">
-        <div class="center-block">
-            <p class="text-center">
-                Tervetuloa X:n ja Y:n lahjanvaraussivustolle! 
-                Tähän tekstidaa.
-                Kysymyksissä ja ongelmatilanteissa ota yhteyttä x@y.z.</p>
+        <div class="center-block text-center text-justify etuinfo">
+            
+            <br>
+            <p>Hääparia muistavat voivat tutustua lahjatoiveisiimme, jotka on esitelty alla. Täydennetyn hääinfon Suomenlinnan erityisohjeineen sekä kaasojen ja bestmanien yhteystiedot löydätte 
+                <a href="info#contact"><u>tästä</u></a>.</p> 
+            <p>Vietämme häämatkastamme osan Karibianmeren äärellä ja loput New Yorkissa. Lahjatoiveemme onkin räätälöity vastaamaan kokemuksia, jotka ovat unelmamme häämatkalle. Halutessanne voitte myös muistaa asuntosäästöämme. Jos haluatte tarjota meille lahjan, klikatkaa ”Varaa”, täyttäkää pyydetyt tiedot ja vahvistakaa varaus. Varatut lahjat maksetaan tilille FI90 6601 0003 0398 72 / Sonja Ulma. Kirjoittakaa viestikenttään lahjan nimi. Kaasot Tanja Ulma ja Laura Kirvesniemi vastaavat lahjatoiveitamme koskeviin 
+                <a href="info#contact"><u>kysymyksiin</u></a>.</p>
+            <p></p>
+        </div>
+        <div class="container center-block text-center etuinfo">
+            <h5>Suurin lahja on kuitenkin läsnäolonne.</h5>
         </div>
         <br />
         
@@ -69,7 +80,7 @@
                         <td>${lahja.nimi}</td>
                         <c:choose>
                             <c:when test="${lahja.hinta != null}">
-                                <td>${lahja.hinta}</td>
+                                <td><fmt:formatNumber pattern="0" value="${lahja.hinta}"/></td>
                             </c:when>
                             <c:otherwise>
                                 <td></td> 
@@ -127,13 +138,13 @@
                         <div class="form-group">
                             <label class="col-md-2 control-label">Email</label>
                             <div class="col-md-10">
-                                <input type="text" class="form-control" name="email" placeholder="Email (pakollinen)">
+                                <input type="text" class="form-control" name="email" placeholder="Email (vapaaehtoinen)">
                             </div> 
                         </div>
                         <div class="form-group">
                             <label class="col-md-2 control-label">Puh.nro.</label>
                             <div class="col-md-10">
-                                <input type="text" class="form-control" name="numero" placeholder="Numero">
+                                <input type="text" class="form-control" name="numero" placeholder="Numero (vapaaehtoinen)">
                             </div> 
                         </div> 
                         <div class="modal-body right">
@@ -141,6 +152,7 @@
                         </div>
                     </form>
                     <br>
+                    <!--
                     <form class="form-horizontal" role="form" action="varaanyky" method="POST">
                         <input type="hidden" name="lahja-id" id="id-kentta2" value=""/>
                         <h4 class ="modal-title">Toista lahjaa varaavat</h4>
@@ -154,6 +166,7 @@
                             <button type="submit" class="btn btn-primary">Vahvista varaus</button>
                         </div>
                     </form>
+                    -->
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Sulje</button>
                     </div>

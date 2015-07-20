@@ -19,6 +19,18 @@ p, div {
     margin-right:-4px;
 }
 
+#hääinfo {
+    width: 50%;
+}
+
+.etuinfo {
+    width: 55%;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one :-)       */

@@ -367,7 +367,7 @@ public class Lahjaehdotus{
         try {
             yhteys = Tietokanta.getYhteys();
 
-            String sql = "SELECT * from Lahjaehdotus WHERE LOWER(nimi) LIKE LOWER(?) ORDER BY nimi";
+            String sql = "SELECT * from Lahjaehdotus WHERE LOWER(nimi) LIKE LOWER(?) ORDER BY id";
             kysely = yhteys.prepareStatement(sql);
             kysely.setString(1, "%" + hakuehto + "%");
 

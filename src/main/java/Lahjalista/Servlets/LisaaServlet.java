@@ -54,6 +54,8 @@ public class LisaaServlet extends LahjalistaServlet {
                 
                 response.sendRedirect("admin");
             } catch (Exception e) {
+                session.setAttribute("ilmoitus", e.getMessage());
+                response.sendRedirect("admin");
             }
         } else {
             Collection<String> virheet = uusiLahja.getVirheet();

@@ -193,7 +193,7 @@ public class Varaus {
             yhteys = Tietokanta.getYhteys();
 
 
-            String sql = "SELECT * FROM Varaus WHERE lahja_id = ?";
+            String sql = "SELECT * FROM Varaus WHERE lahja_id = ? ORDER BY id";
             kysely = yhteys.prepareStatement(sql);
             kysely.setInt(1, lahjaId);
 

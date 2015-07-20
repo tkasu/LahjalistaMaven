@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-public class VaraaServlet extends HttpServlet {
+public class VaraaServlet extends LahjalistaServlet {
 
 
     @Override
@@ -49,9 +49,12 @@ public class VaraaServlet extends HttpServlet {
         try {
             uusiVaraus.lisaaKantaan();
             String ilmoitus = "Varaus lisätty onnistuneesti!";
-            session.setAttribute("ilmoitus", ilmoitus);    
-            response.sendRedirect("lahjalista");
+            session.setAttribute("ilmoitus", ilmoitus);
+            response.sendRedirect("info#maksuohjeet");
+            //response.sendRedirect("lahjalista");
         } catch (Exception e) {
+            session.setAttribute("ilmoitus", e.getMessage());
+            response.sendRedirect("lahjalista");
             
         }
     }

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <t:pohja pageTitle="Lahjalista"> 
         <div class="container">
-            
+            <br><br><br><br>
             <div class="container">
                 <img class="center-block" src="logo.png" class="img-responsive" height="40%" width="40%">
             </div>

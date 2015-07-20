@@ -12,6 +12,9 @@ public class VarauksetServlet extends LahjalistaServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        request.setCharacterEncoding("UTF-8");
+        
         if (onkoKirjautunut(request, response)) {
             String hakuehto = request.getParameter("hakukentta");
             haeVaraukset(hakuehto, request, response);

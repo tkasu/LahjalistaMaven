@@ -44,8 +44,11 @@ public class VaraaEmailillaServlet extends LahjalistaServlet {
                     uusiVaraus.lisaaKantaan();
                     String ilmoitus = "Varaus lisätty onnistuneesti!";
                     session.setAttribute("ilmoitus", ilmoitus);    
+                    response.sendRedirect("info#maksuohjeet");
+                } catch (Exception e) {
+                    session.setAttribute("ilmoitus", e.getMessage());
                     response.sendRedirect("lahjalista");
-                } catch (Exception e) {}
+                }
             }
             
             
